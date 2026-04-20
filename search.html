@@ -1,0 +1,491 @@
+<!DOCTYPE html><!--  Last Published: Mon Apr 20 2026 20:00:35 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="6979e8d0e96be70bcbd56252" data-wf-site="69599653517bcce3c01ac8b6" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Search Results</title>
+  <meta content="Search Results" property="og:title">
+  <meta content="Search Results" property="twitter:title">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="noindex" name="robots">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/seosdesign.webflow.css" rel="stylesheet" type="text/css">
+  <style>html.w-mod-js:not(.w-mod-ix3) :is(.cover-image, .intro-text, .heading-style-h2) {visibility: hidden !important;}</style>
+  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+  <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="images/webclip.png" rel="apple-touch-icon">
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-LGB24T4E53"></script>
+  <script type="text/javascript">window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('set', 'developer_id.dZGVlNj', true);gtag('js', new Date());gtag('config', 'G-LGB24T4E53');</script>
+  <style>
+  /* --- För att svenska bokstäver "å, ä, ö" inte ska klippas vid gsap animation --- */
+  .gsap_split_word {
+    padding-top: 0.2em;
+    margin-top: -0.2em;
+  }
+  .wf-tooltip,
+  .wf-tooltip-bubble {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  .navigation-link-text .gsap_split_letter {
+    padding-top: 0.15em;
+    margin-top: -0.075em;
+  }
+  .link-text .gsap_split_letter {
+    margin-top: -0.2em;
+    padding-top: 0.2em;
+  }
+  .nav-link .gsap_split_letter {
+    margin-top: -0.15em;
+    padding-top: 0.15em;
+  }
+</style>
+  <style>
+  /* If you ever still use embeds inside rich text, keep them inline */
+  .w-richtext .w-embed {
+    display: inline;
+    margin: 0;
+  }
+  .w-richtext .w-embed:before,
+  .w-richtext .w-embed:after {
+    display: none !important;
+    content: none !important;
+  }
+  /* Hide the glossary data list */
+  .wf-glossary-data {
+    display: none;
+  }
+  /* Tooltip trigger */
+  .wf-tooltip {
+    cursor: help;
+    border-bottom: 1px dotted currentColor;
+    text-decoration: none; /* since it's an <a> */
+    color: inherit; /* optional: keep normal text color */
+  }
+  /* Clickable tooltip bubble (it will be an <a>) */
+  .wf-tooltip-bubble {
+    position: fixed;
+    z-index: 9999;
+    max-width: 280px;
+    padding: 8px 10px;
+    padding-right: 26px;
+    padding-bottom: 16px;
+    border-radius: 8px;
+    font-size: 12px;
+    line-height: 1.35;
+    background: #111;
+    color: #fff;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.22);
+    opacity: 0;
+    transform: translateY(4px);
+    transition:
+      opacity 0.12s ease,
+      transform 0.12s ease;
+    pointer-events: auto;
+    cursor: pointer;
+    text-decoration: none;
+    display: none; /* shown via JS */
+  }
+  .wf-tooltip-bubble.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .wf-tooltip-bubble::after {
+    content: '→';
+    position: absolute;
+    right: 10px;
+    bottom: 6px;
+    font-size: 14px;
+    line-height: 1;
+    opacity: 0.9;
+    pointer-events: none; /* so it never blocks clicks */
+  }
+  .wf-tooltip-bubble:hover {
+    text-decoration: underline;
+  }
+</style>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('consent', 'default', {
+    analytics_storage: 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    functionality_storage: 'denied',
+    personalization_storage: 'denied',
+    security_storage: 'granted',
+  });
+</script>
+  <script>
+  (function (w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+    var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s),
+      dl = l != 'dataLayer' ? '&l=' + l : '';
+    j.async = true;
+    j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+    f.parentNode.insertBefore(j, f);
+  })(window, document, 'script', 'dataLayer', 'GTM-K92JJPHR');
+</script>
+  <script src="https://seos-cookie-banner.vercel.app/js/script.js" async=""></script>
+</head>
+<body>
+  <div class="w-container">
+    <h1>Search results</h1>
+    <form action="/search" class="w-form"><label for="search">Search</label><input class="w-input" maxlength="256" name="query" placeholder="Search…" type="search" id="search" required=""><input type="submit" class="w-button" value="Search"></form>
+  </div>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=69599653517bcce3c01ac8b6" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="js/webflow.js" type="text/javascript"></script>
+  <script src="https://cdn.prod.website-files.com/gsap/3.14.2/gsap.min.js" type="text/javascript"></script>
+  <script src="https://cdn.prod.website-files.com/gsap/3.14.2/SplitText.min.js" type="text/javascript"></script>
+  <script src="https://cdn.prod.website-files.com/gsap/3.14.2/ScrollTrigger.min.js" type="text/javascript"></script>
+  <script>
+  (function () {
+    /* =========================================================
+     CONFIG
+  ==========================================================*/
+    const RICHTEXT_SELECTOR = '.w-richtext';
+    const DATA_ITEM_SELECTOR = '.wf-glossary-item';
+    const USE_WORD_BOUNDARIES = true;
+    const SECTION_TAGS = new Set(['H1', 'H2']);
+    // Detect iOS (including iPadOS masquerading as Mac)
+    const IS_IOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    // Detect any touch device (for disabling hover logic)
+    const IS_TOUCH = IS_IOS || 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    /* =========================================================
+     TOOLTIP BUBBLE
+  ==========================================================*/
+    const GAP = 8;
+    const OFFSET_Y = 10;
+    const OFFSET_X = 0;
+    const bubble = document.createElement('a');
+    bubble.className = 'wf-tooltip-bubble';
+    bubble.setAttribute('role', 'tooltip');
+    // Don't set href until we have a real one — iOS treats href="#" specially
+    bubble.style.display = 'none';
+    // Critical for iOS: make sure taps register immediately on the bubble
+    bubble.style.touchAction = 'manipulation';
+    bubble.style.webkitTapHighlightColor = 'rgba(0,0,0,0)';
+    document.body.appendChild(bubble);
+    let activeEl = null;
+    let overTrigger = false;
+    let overBubble = false;
+    let hideTimer = null;
+    // Track which element is "armed" for navigation on touch devices
+    let armedEl = null;
+    let armedAt = 0;
+    const ARM_RESET_MS = 2500;
+    function clamp(v, min, max) {
+      return Math.max(min, Math.min(max, v));
+    }
+    function clearHideTimer() {
+      if (hideTimer) {
+        clearTimeout(hideTimer);
+        hideTimer = null;
+      }
+    }
+    function scheduleHide() {
+      clearHideTimer();
+      hideTimer = setTimeout(() => {
+        if (!overTrigger && !overBubble) hideBubble();
+      }, 120);
+    }
+    function positionBubbleToElement(el) {
+      if (!el) return;
+      bubble.style.left = '0px';
+      bubble.style.top = '0px';
+      bubble.style.visibility = 'hidden';
+      bubble.style.display = 'block';
+      bubble.classList.add('is-visible');
+      const b = bubble.getBoundingClientRect();
+      const r = el.getBoundingClientRect();
+      let left = r.left + OFFSET_X;
+      let top = r.bottom + OFFSET_Y;
+      left = clamp(left, GAP, window.innerWidth - b.width - GAP);
+      if (top + b.height + GAP > window.innerHeight) {
+        top = r.top - b.height - OFFSET_Y;
+      }
+      top = clamp(top, GAP, window.innerHeight - b.height - GAP);
+      bubble.style.left = left + 'px';
+      bubble.style.top = top + 'px';
+      bubble.style.visibility = 'visible';
+    }
+    function showBubble(el) {
+      const text = el.getAttribute('data-tooltip') || '';
+      const href = el.getAttribute('href') || el.getAttribute('data-href') || '';
+      if (!text) return;
+      activeEl = el;
+      bubble.textContent = text;
+      // Only set href if we have a real URL
+      if (href) {
+        bubble.setAttribute('href', href);
+      } else {
+        bubble.removeAttribute('href');
+      }
+      if (!el.id) el.id = 'wf-tooltip-' + Math.random().toString(16).slice(2);
+      bubble.id = el.id + '-bubble';
+      el.setAttribute('aria-describedby', bubble.id);
+      clearHideTimer();
+      bubble.style.display = 'block';
+      bubble.classList.add('is-visible');
+      positionBubbleToElement(el);
+    }
+    function hideBubble() {
+      clearHideTimer();
+      bubble.classList.remove('is-visible');
+      bubble.style.display = 'none';
+      bubble.textContent = '';
+      bubble.removeAttribute('href');
+      if (activeEl) activeEl.removeAttribute('aria-describedby');
+      activeEl = null;
+      overTrigger = false;
+      overBubble = false;
+    }
+    /* =========================================================
+     DESKTOP HOVER (pointer events) — skip on touch devices
+  ==========================================================*/
+    if (!IS_TOUCH) {
+      document.addEventListener('pointerover', (e) => {
+        const el = e.target.closest('.wf-tooltip');
+        if (!el) return;
+        overTrigger = true;
+        showBubble(el);
+      });
+      document.addEventListener('pointerout', (e) => {
+        const el = e.target.closest('.wf-tooltip');
+        if (!el || el !== activeEl) return;
+        overTrigger = false;
+        const goingTo = e.relatedTarget;
+        if (goingTo && bubble.contains(goingTo)) return;
+        scheduleHide();
+      });
+      bubble.addEventListener('pointerenter', () => {
+        overBubble = true;
+        clearHideTimer();
+      });
+      bubble.addEventListener('pointerleave', () => {
+        overBubble = false;
+        scheduleHide();
+      });
+    }
+    /* =========================================================
+     TOUCH / CLICK HANDLING
+     Strategy: use `click` as the source of truth, not touchstart.
+     iOS reliably fires `click` after a tap, and this avoids the
+     touchstart/preventDefault/synthetic-click race.
+  ==========================================================*/
+    // Single click handler on triggers — works on both desktop and mobile
+    document.addEventListener('click', (e) => {
+      const trigger = e.target.closest('.wf-tooltip');
+      const insideBubble = e.target.closest('.wf-tooltip-bubble');
+      // Click on a tooltip trigger
+      if (trigger) {
+        // On desktop (no touch), let the link navigate normally
+        if (!IS_TOUCH) return;
+        // On touch: first tap opens bubble, second tap on SAME trigger navigates
+        const now = Date.now();
+        const isArmed = armedEl === trigger && now - armedAt < ARM_RESET_MS;
+        if (isArmed) {
+          // Second tap — allow default navigation
+          armedEl = null;
+          return;
+        }
+        // First tap — show bubble, block navigation
+        e.preventDefault();
+        armedEl = trigger;
+        armedAt = now;
+        showBubble(trigger);
+        return;
+      }
+      // Click on the bubble itself — always allow navigation if href exists
+      if (insideBubble) {
+        const href = bubble.getAttribute('href');
+        if (!href) {
+          e.preventDefault();
+        }
+        // Otherwise let the <a> navigate natively — do NOT preventDefault
+        return;
+      }
+      // Click outside both — close bubble on touch devices
+      if (IS_TOUCH && activeEl) {
+        hideBubble();
+        armedEl = null;
+      }
+    });
+    // On touch devices, also close when tapping elsewhere via touchstart
+    // (covers cases where click doesn't fire, e.g. scrolling)
+    if (IS_TOUCH) {
+      document.addEventListener(
+        'touchstart',
+        (e) => {
+          const trigger = e.target.closest('.wf-tooltip');
+          const insideBubble = e.target.closest('.wf-tooltip-bubble');
+          if (!trigger && !insideBubble && activeEl) {
+            hideBubble();
+            armedEl = null;
+          }
+        },
+        { passive: true },
+      );
+    }
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        hideBubble();
+        armedEl = null;
+      }
+    });
+    window.addEventListener(
+      'scroll',
+      () => {
+        if (!activeEl) return;
+        positionBubbleToElement(activeEl);
+      },
+      { passive: true },
+    );
+    window.addEventListener('resize', () => {
+      if (!activeEl) return;
+      positionBubbleToElement(activeEl);
+    });
+    /* =========================================================
+     GLOSSARY MAP
+  ==========================================================*/
+    function escapeRegExp(str) {
+      return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+    function buildGlossary() {
+      const currentMarker = document.getElementById('wf-current-glossary');
+      const currentSlug = currentMarker ? (currentMarker.getAttribute('data-current-slug') || '').trim() : '';
+      const nodes = Array.from(document.querySelectorAll(DATA_ITEM_SELECTOR));
+      const items = nodes
+        .map((node) => ({
+          term: (node.getAttribute('data-term') || '').trim(),
+          tooltip: (node.getAttribute('data-tooltip') || '').trim(),
+          href: (node.getAttribute('data-href') || '').trim(),
+        }))
+        .filter((x) => x.term && x.tooltip && x.href)
+        .filter((x) => {
+          if (!currentSlug) return true;
+          const hrefPath = x.href.split('?')[0].replace(/\/+$/, '');
+          const hrefSlug = hrefPath.split('/').pop();
+          return hrefSlug !== currentSlug;
+        });
+      items.sort((a, b) => b.term.length - a.term.length);
+      const lookup = new Map();
+      items.forEach((x) => lookup.set(x.term.toLowerCase(), x));
+      return { items, lookup };
+    }
+    /* =========================================================
+     REPLACE TERMS
+  ==========================================================*/
+    function applyTooltips(glossaryItems, lookup) {
+      const richTexts = document.querySelectorAll(RICHTEXT_SELECTOR);
+      if (!richTexts.length) return;
+      const parts = glossaryItems.map((g) => escapeRegExp(g.term));
+      if (!parts.length) return;
+      const pattern = parts.join('|');
+      const re = USE_WORD_BOUNDARIES ? new RegExp(`\\b(${pattern})\\b`, 'gi') : new RegExp(`(${pattern})`, 'gi');
+      function shouldSkipTextNode(node) {
+        const p = node.parentElement;
+        if (!p) return true;
+        if (p.closest('a, .wf-tooltip, script, style, code, pre')) return true;
+        return false;
+      }
+      function makeLink(text, entry) {
+        const a = document.createElement('a');
+        a.className = 'wf-tooltip';
+        a.href = entry.href;
+        a.setAttribute('data-tooltip', entry.tooltip);
+        // iOS: ensure crisp tap behavior
+        a.style.touchAction = 'manipulation';
+        a.textContent = text;
+        return a;
+      }
+      function replaceInTextNode(textNode, linkedInHeading, linkedInBody, inHeading) {
+        if (shouldSkipTextNode(textNode)) return;
+        const original = textNode.nodeValue;
+        if (!original || !original.trim()) return;
+        let match;
+        let lastIndex = 0;
+        const frag = document.createDocumentFragment();
+        let didReplace = false;
+        re.lastIndex = 0;
+        while ((match = re.exec(original)) !== null) {
+          const matchedText = match[1];
+          const start = match.index;
+          const end = start + matchedText.length;
+          if (start > lastIndex) {
+            frag.appendChild(document.createTextNode(original.slice(lastIndex, start)));
+          }
+          const key = matchedText.toLowerCase();
+          const entry = lookup.get(key);
+          if (!entry) {
+            frag.appendChild(document.createTextNode(matchedText));
+            lastIndex = end;
+            continue;
+          }
+          let shouldLink = false;
+          if (inHeading) {
+            if (!linkedInHeading.has(key)) {
+              shouldLink = true;
+              linkedInHeading.add(key);
+            }
+          } else {
+            if (!linkedInBody.has(key)) {
+              shouldLink = true;
+              linkedInBody.add(key);
+            }
+          }
+          if (shouldLink) {
+            frag.appendChild(makeLink(matchedText, entry));
+          } else {
+            frag.appendChild(document.createTextNode(matchedText));
+          }
+          didReplace = true;
+          lastIndex = end;
+        }
+        if (!didReplace) return;
+        if (lastIndex < original.length) {
+          frag.appendChild(document.createTextNode(original.slice(lastIndex)));
+        }
+        textNode.parentNode.replaceChild(frag, textNode);
+      }
+      function processBlock(block, linkedInHeading, linkedInBody, inHeading) {
+        const walker = document.createTreeWalker(block, NodeFilter.SHOW_TEXT, null);
+        const textNodes = [];
+        let n;
+        while ((n = walker.nextNode())) textNodes.push(n);
+        textNodes.forEach((tn) => replaceInTextNode(tn, linkedInHeading, linkedInBody, inHeading));
+      }
+      richTexts.forEach((rt) => {
+        const blocks = Array.from(rt.children || []);
+        if (!blocks.length) return;
+        let linkedInHeading = new Set();
+        let linkedInBody = new Set();
+        let inHeading = false;
+        blocks.forEach((block) => {
+          const tag = (block.tagName || '').toUpperCase();
+          if (tag === 'H1' || tag === 'H2') {
+            linkedInHeading = new Set();
+            linkedInBody = new Set();
+            inHeading = true;
+          }
+          processBlock(block, linkedInHeading, linkedInBody, inHeading);
+          if (tag === 'H1' || tag === 'H2') {
+            inHeading = false;
+          }
+        });
+      });
+    }
+    /* =========================================================
+     RUN
+  ==========================================================*/
+    const { items, lookup } = buildGlossary();
+    if (items.length) applyTooltips(items, lookup);
+  })();
+</script>
+</body>
+</html>
