@@ -235,21 +235,28 @@
   });
   if (msgForm) {
     var WF_SITE_ID = '69599653517bcce3c01ac8b6';
-    var FORM_NAME = 'Popup CTA';
+    var WF_PAGE_ID = '69599654517bcce3c01ac917';
+    var WF_ELEMENT_ID = 'd3b70433-9746-6b0a-db0a-32def9f8dc43';
+    var FORM_NAME = 'Kontakt Förfrågan';
     msgForm.addEventListener('submit', function (e) {
       e.preventDefault();
       var submitBtn = msgForm.querySelector('.pct-submit');
       var origText = submitBtn ? submitBtn.textContent : '';
       if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Skickar…'; }
       var fd = new FormData(msgForm);
-      var data = {};
-      fd.forEach(function (v, k) { data[k] = v; });
-      data.source = location.pathname;
       var body = new URLSearchParams();
       body.append('name', FORM_NAME);
+      body.append('pageId', WF_PAGE_ID);
+      body.append('elementId', WF_ELEMENT_ID);
+      body.append('domain', location.host);
       body.append('source', location.href);
       body.append('test', 'false');
-      body.append('fields', JSON.stringify(data));
+      body.append('collectionId', '');
+      body.append('itemSlug', '');
+      body.append('fields[Namn]', '[POPUP] ' + (fd.get('name') || ''));
+      body.append('fields[E-post]', fd.get('email') || '');
+      body.append('fields[Meddelande]', fd.get('message') || '');
+      body.append('fields[Källa]', location.pathname);
       body.append('dolphin', 'false');
       fetch('https://webflow.com/api/v1/form/' + WF_SITE_ID, {
         method: 'POST',
