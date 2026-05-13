@@ -234,10 +234,42 @@
     b.addEventListener('click', close);
   });
   if (msgForm) {
+    var WF_SITE_ID = '69599653517bcce3c01ac8b6';
+    var FORM_NAME = 'Popup CTA';
     msgForm.addEventListener('submit', function (e) {
       e.preventDefault();
-      showView('success');
-      setTimeout(function () { msgForm.reset(); }, 400);
+      var submitBtn = msgForm.querySelector('.pct-submit');
+      var origText = submitBtn ? submitBtn.textContent : '';
+      if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Skickar…'; }
+      var fd = new FormData(msgForm);
+      var data = {};
+      fd.forEach(function (v, k) { data[k] = v; });
+      data.source = location.pathname;
+      var body = new URLSearchParams();
+      body.append('name', FORM_NAME);
+      body.append('source', location.href);
+      body.append('test', 'false');
+      body.append('fields', JSON.stringify(data));
+      body.append('dolphin', 'false');
+      fetch('https://webflow.com/api/v1/form/' + WF_SITE_ID, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: body.toString()
+      })
+        .then(function (r) { return r.ok ? r.json().catch(function(){return{};}) : Promise.reject(r.status); })
+        .then(function () {
+          showView('success');
+          setTimeout(function () { msgForm.reset(); }, 400);
+        })
+        .catch(function (err) {
+          console.warn('[pct] form submit failed', err);
+          var sub = root.querySelector('[data-pct-success-sub]');
+          if (sub) sub.textContent = 'Något gick fel — försök igen eller maila kontakt@seosdesign.se';
+          showView('success');
+        })
+        .finally(function () {
+          if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = origText; }
+        });
     });
   }
   document.addEventListener('keydown', function (e) {
