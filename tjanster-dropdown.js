@@ -31,11 +31,12 @@
   transition:background-color .25s ease, color .25s ease;
 }
 .nav-dropdown-wrapper > .nav-link .tjd-caret{
-  width:8px;height:8px;display:inline-block;flex-shrink:0;
+  width:7px;height:7px;display:inline-block;flex-shrink:0;
   border-right:1.5px solid currentColor;
   border-bottom:1.5px solid currentColor;
-  transform:rotate(45deg) translateY(-1px);
+  transform:rotate(45deg) translateY(-3px);
   transition:transform .35s ease;
+  margin-left:.1rem;
 }
 .nav-dropdown-wrapper.is-open > .nav-link{
   background:rgba(255,255,255,.92) !important;
@@ -57,9 +58,9 @@
   left:50% !important;
   width:min(680px, 92vw) !important;
   min-width:0 !important;
-  margin-top:14px !important;
+  margin-top:28px !important;
   padding:.5rem !important;
-  background:rgba(14,14,14,.92) !important;
+  background:rgba(14,14,14,.985) !important;
   border:1px solid rgba(255,255,255,.10) !important;
   border-radius:1.5rem !important;
   -webkit-backdrop-filter:blur(14px);
@@ -73,11 +74,11 @@
   transform-origin:top center;
   transition:opacity 240ms var(--dd-ease), visibility 0s linear var(--dd-dur) !important;
 }
-/* 14px hover-bridge */
+/* hover-bridge */
 .anti-mousleave-spacer{
   position:absolute !important;
-  top:-14px !important; left:0 !important; right:0 !important;
-  height:14px !important; background:transparent !important;
+  top:-28px !important; left:0 !important; right:0 !important;
+  height:28px !important; background:transparent !important;
   pointer-events:auto !important;
 }
 .nav-dropdown-wrapper.is-open .services-flyout{
